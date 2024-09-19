@@ -1,0 +1,20 @@
+Table table;
+
+void setup() {
+  size(600, 600);
+  table = loadTable("Data.csv", "header");
+  println("Data loaded:");
+  println(table.getRowCount() + " rows");
+
+  for (TableRow row : table.rows()) {
+    String dateTime = row.getString("Date_Time");  
+    int numberOfPeople = row.getInt("No_of_People"); 
+
+    println("Date and Time: " + dateTime + ", Number of People: " + numberOfPeople);
+  }
+}
+
+void draw() {
+
+  
+} 
